@@ -10,7 +10,7 @@ const e_symbol = document.getElementById("symbol")
 const UPPER = "ABCDEFGHIJKLMNOPQRSTUVWXYZ"
 const LOWER = "abcdefghijklmnopqrstuvwxyz"
 const NUMBER = "0123456789"
-const SYMBOL = "!@#$%&*()+="
+const SYMBOL = "!@#$&*+=" // not ><()%;\
 
 //* retorna um elemento do array a partir de uma posição aleatória
 function getUppercase() {
@@ -95,10 +95,10 @@ e_copy.addEventListener("click", () => {
         return
     }
 
+    // cria textarea e copia seu conteúdo
     textarea.value = password
     document.body.appendChild(textarea)
     textarea.select()
     document.execCommand("copy")
     textarea.remove()
-    alert("Senha copiada com sucesso")
 })
